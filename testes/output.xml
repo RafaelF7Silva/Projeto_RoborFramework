@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220517 14:47:58.518" rpa="false" schemaversion="3">
+<suite id="s1" name="ScriptSelenium" source="C:\ProjetoRobot\testes\ScriptSelenium.robot">
+<test id="s1-t1" name="Abrir Navegador na página google" line="5">
+<kw name="Abrir pagina &quot;http://www.google.com&quot; com o navegador &quot;firefox&quot;" sourcename="Abrir pagina &quot;${URL}&quot; com o navegador &quot;${navegador}&quot;">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${navegador}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220517 14:47:59.059" level="INFO">Opening browser 'firefox' to base url 'http://www.google.com'.</msg>
+<msg timestamp="20220517 14:47:59.061" level="INFO">Firefox driver log is always forced to to: C:\ProjetoRobot\testes\geckodriver-11.log</msg>
+<status status="PASS" starttime="20220517 14:47:59.059" endtime="20220517 14:48:06.770"/>
+</kw>
+<status status="PASS" starttime="20220517 14:47:59.059" endtime="20220517 14:48:06.770"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Google</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220517 14:48:06.779" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" starttime="20220517 14:48:06.771" endtime="20220517 14:48:06.779"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>Robot Framework</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220517 14:48:06.780" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
+<status status="PASS" starttime="20220517 14:48:06.780" endtime="20220517 14:48:06.872"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220517 14:48:06.875" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg timestamp="20220517 14:48:07.154" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220517 14:48:07.154" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220517 14:48:06.874" endtime="20220517 14:48:07.167"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220517 14:48:07.168" endtime="20220517 14:48:07.753"/>
+</kw>
+<status status="PASS" starttime="20220517 14:47:59.058" endtime="20220517 14:48:07.754"/>
+</test>
+<status status="PASS" starttime="20220517 14:47:58.518" endtime="20220517 14:48:07.756"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="ScriptSelenium">ScriptSelenium</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
