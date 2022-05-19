@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220519 14:56:38.179" rpa="false" schemaversion="3">
+<suite id="s1" name="Cadastro-Pageobjects" source="C:\1-ProjetoRobot_M1\TesteCadastro\cadastro-pageobjects.robot">
+<kw name="Abrir navegador no sistema cadastro de clientes" library="LoginPage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_LOGIN}</arg>
+<arg>${NAVEGADOR_TESTE}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220519 14:56:38.455" level="INFO">Opening browser 'firefox' to base url 'https://estivalet.github.io/robot-static-testing-site/index.html'.</msg>
+<msg timestamp="20220519 14:56:38.456" level="INFO">Firefox driver log is always forced to to: C:\1-ProjetoRobot_M1\TesteCadastro\geckodriver-1.log</msg>
+<status status="PASS" starttime="20220519 14:56:38.455" endtime="20220519 14:56:44.660"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 14:56:44.660" endtime="20220519 14:56:44.929"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220519 14:56:44.929" endtime="20220519 14:56:44.929"/>
+</kw>
+<status status="PASS" starttime="20220519 14:56:38.448" endtime="20220519 14:56:44.929"/>
+</kw>
+<test id="s1-t1" name="Fazer um cadastro de um novo cliente" line="13">
+<kw name="Fazer login no sistema cadastro de clientes" library="LoginPage" type="SETUP">
+<kw name="Informar usuário e senha" library="LoginPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_USUARIO}</arg>
+<arg>${USUARIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 14:56:44.936" level="INFO">Typing text 'admin' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20220519 14:56:44.935" endtime="20220519 14:56:46.464"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 14:56:46.464" level="INFO">Typing text 'admin' into text field 'Id=password'.</msg>
+<status status="PASS" starttime="20220519 14:56:46.464" endtime="20220519 14:56:47.970"/>
+</kw>
+<status status="PASS" starttime="20220519 14:56:44.935" endtime="20220519 14:56:47.970"/>
+</kw>
+<kw name="Realizar o login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 14:56:47.970" level="INFO">Clicking element 'id=login'.</msg>
+<status status="PASS" starttime="20220519 14:56:47.970" endtime="20220519 14:56:48.988"/>
+</kw>
+<status status="PASS" starttime="20220519 14:56:47.970" endtime="20220519 14:56:48.988"/>
+</kw>
+<status status="PASS" starttime="20220519 14:56:44.935" endtime="20220519 14:56:48.988"/>
+</kw>
+<kw name="Ir para pagina cadastro de clientes" library="MenuPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_CADSTRO_CLIENTES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 14:56:48.992" level="INFO">Clicking element 'id=btn-cadastro-cliente'.</msg>
+<status status="PASS" starttime="20220519 14:56:48.988" endtime="20220519 14:56:50.043"/>
+</kw>
+<status status="PASS" starttime="20220519 14:56:48.988" endtime="20220519 14:56:50.043"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220519 14:56:50.043" endtime="20220519 14:56:50.043"/>
+</kw>
+<kw name="Verificar o titulo da pagina" library="cadastro_cliente">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITULO_PAGE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220519 14:56:50.559" level="INFO">Page title is 'Cadastro de Clientes'.</msg>
+<status status="PASS" starttime="20220519 14:56:50.045" endtime="20220519 14:56:50.559"/>
+</kw>
+<status status="PASS" starttime="20220519 14:56:50.045" endtime="20220519 14:56:50.559"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 14:56:50.559" endtime="20220519 14:56:51.076"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220519 14:56:51.076" endtime="20220519 14:56:51.076"/>
+</kw>
+<kw name="Preencher cadastro do cliente" library="cadastro_cliente">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_NOME_CLIENTE}</arg>
+<arg>${NOME_CLIENTE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 14:56:51.081" level="INFO">Typing text 'Rafael Silva' into text field 'Id=nome_cliente'.</msg>
+<status status="PASS" starttime="20220519 14:56:51.081" endtime="20220519 14:56:52.628"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_CPF_CLIENTE}</arg>
+<arg>${CPF}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 14:56:52.628" level="INFO">Typing text '12345678909' into text field 'Id=cpf'.</msg>
+<status status="PASS" starttime="20220519 14:56:52.628" endtime="20220519 14:56:54.154"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_DATA_NASC_CLIENTE}</arg>
+<arg>${DATA_NASCIMENTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 14:56:54.154" level="INFO">Typing text '12092009' into text field 'Id=dtnasc'.</msg>
+<status status="PASS" starttime="20220519 14:56:54.154" endtime="20220519 14:56:55.658"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_MASC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 14:56:55.658" level="INFO">Clicking element 'xpath=//input[@value='masculino']'.</msg>
+<status status="PASS" starttime="20220519 14:56:55.658" endtime="20220519 14:56:56.878"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_TEL}</arg>
+<arg>${TELEFONE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 14:56:56.878" level="INFO">Typing text '11856545874' into text field 'Id=prependedtext'.</msg>
+<status status="PASS" starttime="20220519 14:56:56.878" endtime="20220519 14:56:58.397"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_EMAIL}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 14:56:58.397" level="INFO">Typing text 'rafa_robotframework@gmail.com.br' into text field 'Id=email'.</msg>
+<status status="PASS" starttime="20220519 14:56:58.397" endtime="20220519 14:56:59.917"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_CEP_CLIENTE}</arg>
+<arg>${CEP}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 14:56:59.917" level="INFO">Typing text '09791500' into text field 'Id=cep'.</msg>
+<status status="PASS" starttime="20220519 14:56:59.917" endtime="20220519 14:57:01.437"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_PESQUISAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:01.437" level="INFO">Clicking element 'xpath=//button[text()='Pesquisar']'.</msg>
+<status status="PASS" starttime="20220519 14:57:01.437" endtime="20220519 14:57:02.656"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>200ms</arg>
+<arg>Aguardar o valor "Rua Amélio Storti" no elemento "${INPUT_RUA_CLIENTE}" estar presente</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar o valor &quot;Rua Amélio Storti&quot; no elemento &quot;id=rua&quot; estar presente" library="cadastro_cliente" sourcename="Aguardar o valor &quot;${valor_esperado}&quot; no elemento &quot;${elemento}&quot; estar presente">
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${valor_atual}</var>
+<arg>${elemento}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20220519 14:57:03.697" level="INFO">${valor_atual} = Rua Amélio Storti</msg>
+<status status="PASS" starttime="20220519 14:57:02.656" endtime="20220519 14:57:03.697"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${valor_atual}</arg>
+<arg>${valor_esperado}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220519 14:57:03.697" endtime="20220519 14:57:03.697"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:02.656" endtime="20220519 14:57:03.697"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:02.656" endtime="20220519 14:57:03.697"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_NUM_ENDERECO_CLIENTE}</arg>
+<arg>20</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:03.697" level="INFO">Typing text '20' into text field 'Id=numero'.</msg>
+<status status="PASS" starttime="20220519 14:57:03.697" endtime="20220519 14:57:05.202"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${SELEC_ESTADO_CIVIL}</arg>
+<arg>${ESTADO_CIVIL}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220519 14:57:05.202" level="INFO">Selecting options from selection list 'Id=estado-civil' by value Casado(a).</msg>
+<status status="PASS" starttime="20220519 14:57:05.202" endtime="20220519 14:57:08.946"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CAMPO_ESCOLHA_TESTES_AUTOMATIZADOS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:08.946" level="INFO">Clicking element 'xpath=//span[contains(text(),'Testes Automatizados')]/preceding::input[1]'.</msg>
+<status status="PASS" starttime="20220519 14:57:08.946" endtime="20220519 14:57:10.181"/>
+</kw>
+<status status="PASS" starttime="20220519 14:56:51.080" endtime="20220519 14:57:10.181"/>
+</kw>
+<kw name="Cadastrar o cliente" library="cadastro_cliente">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_CADASTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:10.183" level="INFO">Clicking element 'Id=cadastrar'.</msg>
+<status status="PASS" starttime="20220519 14:57:10.181" endtime="20220519 14:57:11.438"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CAMPO_MSG}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 14:57:11.438" endtime="20220519 14:57:12.472"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:10.181" endtime="20220519 14:57:12.472"/>
+</kw>
+<kw name="Verificar mensagem de sucesso" library="cadastro_cliente">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${MSG_SUCESSO}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220519 14:57:12.472" endtime="20220519 14:57:12.989"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:12.472" endtime="20220519 14:57:12.989"/>
+</kw>
+<kw name="Fazer logout do sistema cadastro de clientes" library="MenuPage" type="TEARDOWN">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_LOGOUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:12.991" level="INFO">Clicking element 'id=btn-logout'.</msg>
+<status status="PASS" starttime="20220519 14:57:12.991" endtime="20220519 14:57:14.061"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:12.989" endtime="20220519 14:57:14.061"/>
+</kw>
+<status status="PASS" starttime="20220519 14:56:44.929" endtime="20220519 14:57:14.061"/>
+</test>
+<test id="s1-t2" name="Não permitir cadastrar um cliente sem informar nome" line="23">
+<kw name="Fazer login no sistema cadastro de clientes" library="LoginPage" type="SETUP">
+<kw name="Informar usuário e senha" library="LoginPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_USUARIO}</arg>
+<arg>${USUARIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:14.070" level="INFO">Typing text 'admin' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20220519 14:57:14.070" endtime="20220519 14:57:15.596"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:15.596" level="INFO">Typing text 'admin' into text field 'Id=password'.</msg>
+<status status="PASS" starttime="20220519 14:57:15.596" endtime="20220519 14:57:17.122"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:14.070" endtime="20220519 14:57:17.122"/>
+</kw>
+<kw name="Realizar o login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:17.122" level="INFO">Clicking element 'id=login'.</msg>
+<status status="PASS" starttime="20220519 14:57:17.122" endtime="20220519 14:57:18.140"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:17.122" endtime="20220519 14:57:18.140"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:14.070" endtime="20220519 14:57:18.140"/>
+</kw>
+<kw name="Ir para pagina cadastro de clientes" library="MenuPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_CADSTRO_CLIENTES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:18.143" level="INFO">Clicking element 'id=btn-cadastro-cliente'.</msg>
+<status status="PASS" starttime="20220519 14:57:18.140" endtime="20220519 14:57:19.190"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:18.140" endtime="20220519 14:57:19.190"/>
+</kw>
+<kw name="Verificar o titulo da pagina" library="cadastro_cliente">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITULO_PAGE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220519 14:57:19.707" level="INFO">Page title is 'Cadastro de Clientes'.</msg>
+<status status="PASS" starttime="20220519 14:57:19.190" endtime="20220519 14:57:19.707"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:19.190" endtime="20220519 14:57:19.707"/>
+</kw>
+<kw name="Cadastrar o cliente" library="cadastro_cliente">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_CADASTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:19.710" level="INFO">Clicking element 'Id=cadastrar'.</msg>
+<status status="PASS" starttime="20220519 14:57:19.707" endtime="20220519 14:57:20.948"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CAMPO_MSG}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 14:57:20.948" endtime="20220519 14:57:21.966"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:19.707" endtime="20220519 14:57:21.966"/>
+</kw>
+<kw name="Verificar a mensagem informando o campo nome é obrigatório" library="cadastro_cliente">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${MENSAGEM_NOME_OBRIGATORIO}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220519 14:57:21.966" endtime="20220519 14:57:22.483"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:21.966" endtime="20220519 14:57:22.483"/>
+</kw>
+<kw name="Fazer logout do sistema cadastro de clientes" library="MenuPage" type="TEARDOWN">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_LOGOUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:22.489" level="INFO">Clicking element 'id=btn-logout'.</msg>
+<status status="PASS" starttime="20220519 14:57:22.487" endtime="20220519 14:57:23.540"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:22.483" endtime="20220519 14:57:23.540"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:14.068" endtime="20220519 14:57:23.540"/>
+</test>
+<test id="s1-t3" name="Não permitir cadastrar um cliente sem informar cpf" line="29">
+<kw name="Fazer login no sistema cadastro de clientes" library="LoginPage" type="SETUP">
+<kw name="Informar usuário e senha" library="LoginPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_USUARIO}</arg>
+<arg>${USUARIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:23.550" level="INFO">Typing text 'admin' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20220519 14:57:23.550" endtime="20220519 14:57:25.075"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:25.075" level="INFO">Typing text 'admin' into text field 'Id=password'.</msg>
+<status status="PASS" starttime="20220519 14:57:25.075" endtime="20220519 14:57:26.596"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:23.550" endtime="20220519 14:57:26.596"/>
+</kw>
+<kw name="Realizar o login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:26.596" level="INFO">Clicking element 'id=login'.</msg>
+<status status="PASS" starttime="20220519 14:57:26.596" endtime="20220519 14:57:27.631"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:26.596" endtime="20220519 14:57:27.631"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:23.550" endtime="20220519 14:57:27.631"/>
+</kw>
+<kw name="Ir para pagina cadastro de clientes" library="MenuPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_CADSTRO_CLIENTES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:27.636" level="INFO">Clicking element 'id=btn-cadastro-cliente'.</msg>
+<status status="PASS" starttime="20220519 14:57:27.631" endtime="20220519 14:57:28.672"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:27.631" endtime="20220519 14:57:28.672"/>
+</kw>
+<kw name="Verificar o titulo da pagina" library="cadastro_cliente">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITULO_PAGE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220519 14:57:29.189" level="INFO">Page title is 'Cadastro de Clientes'.</msg>
+<status status="PASS" starttime="20220519 14:57:28.672" endtime="20220519 14:57:29.189"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:28.672" endtime="20220519 14:57:29.189"/>
+</kw>
+<kw name="Preencher o nome do cliente" library="cadastro_cliente">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_NOME_CLIENTE}</arg>
+<arg>${NOME_CLIENTE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:29.194" level="INFO">Typing text 'Rafael Silva' into text field 'Id=nome_cliente'.</msg>
+<status status="PASS" starttime="20220519 14:57:29.193" endtime="20220519 14:57:30.725"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:29.189" endtime="20220519 14:57:30.725"/>
+</kw>
+<kw name="Cadastrar o cliente" library="cadastro_cliente">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_CADASTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:30.729" level="INFO">Clicking element 'Id=cadastrar'.</msg>
+<status status="PASS" starttime="20220519 14:57:30.725" endtime="20220519 14:57:31.966"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CAMPO_MSG}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 14:57:31.966" endtime="20220519 14:57:32.985"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:30.725" endtime="20220519 14:57:32.985"/>
+</kw>
+<kw name="Verificar a mensagem informando o campo cpf é obrigatório" library="cadastro_cliente">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${MENSAGEM_NOME_OBRIGATORIO}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220519 14:57:32.985" endtime="20220519 14:57:33.502"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:32.985" endtime="20220519 14:57:33.502"/>
+</kw>
+<kw name="Fazer logout do sistema cadastro de clientes" library="MenuPage" type="TEARDOWN">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_LOGOUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 14:57:33.505" level="INFO">Clicking element 'id=btn-logout'.</msg>
+<status status="PASS" starttime="20220519 14:57:33.505" endtime="20220519 14:57:34.574"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:33.502" endtime="20220519 14:57:34.574"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:23.548" endtime="20220519 14:57:34.574"/>
+</test>
+<kw name="Fechar navegador" library="LoginPage" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220519 14:57:34.584" endtime="20220519 14:57:35.677"/>
+</kw>
+<status status="PASS" starttime="20220519 14:57:34.583" endtime="20220519 14:57:35.692"/>
+</kw>
+<status status="PASS" starttime="20220519 14:56:38.179" endtime="20220519 14:57:35.692"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Cadastro-Pageobjects">Cadastro-Pageobjects</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
